@@ -1,0 +1,62 @@
+/* slider2 디자인 */
+.slider2 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* slider의 바깍으로 빠져나가는 slide-item을 보이지 않게 함 */
+    overflow: hidden;
+}
+
+/* slider item2 */
+.slider-item2 {
+    width: 100%;
+    height: 100vh;
+    /* flex의 컨테이너보다 item의 크기가 클 때, width가 바뀌지 않게 설정 */
+    flex-shrink: 0;
+    /* slider-item의 위치를 옮김 */
+    position: relative;
+    /* left의 위치를  */
+    left: 0;
+    transition: all 0.5s;
+}
+
+.slider >.slider-item {
+    background-size: cover;
+    background-position: center;
+}
+
+.slider >.slider-item:nth-child(1){
+    background-image: url(../img/1.jpg);
+}
+
+.slider >.slider-item:nth-child(2) {
+    background-image: url(../img/2.jpg);
+}
+
+.slider >.slider-item:nth-child(3) {
+    background-image: url(../img/3.jpg);
+}
+
+/* slider2-dots */
+.slider2-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    bottom: -1650px;
+}
+
+/* dot의 모양 */
+.slider2-dots .dot {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.slider2-dots .dot:hover, 
+.slider2-dots .dot.on {
+    background-color: black;
+}
